@@ -706,6 +706,129 @@ html, body {
   transform: translateY(-3px);
 }
 
+/* ---------- Team ---------- */
+.team {
+  position: relative;
+  background: var(--bg-black);
+  padding: 100px 60px;
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.team-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(124, 110, 242, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(124, 110, 242, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, black 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, black 30%, transparent 75%);
+  pointer-events: none;
+}
+
+.team-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-photo-wrap {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--purple-bright), var(--purple));
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.team-eyebrow {
+  color: var(--purple-glow);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+
+.team-name {
+  font-size: 34px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.team-role {
+  color: var(--purple-glow);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.team-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #0e0e17;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--text-white);
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.team-link:hover {
+  border-color: var(--purple);
+  transform: translateX(4px);
+}
+
+.team-link-icon {
+  font-size: 18px;
+}
+
+.team-link-text {
+  flex: 1;
+}
+
+.team-link-arrow {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .team {
+    padding: 70px 24px;
+  }
+  .team-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+  .team-links {
+    width: 100%;
+  }
+}
+
 /* ---------- Help button ---------- */
 .help-btn {
   position: fixed;
