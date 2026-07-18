@@ -77,7 +77,7 @@
   </h2>
 
   <div class="features-grid">
-    <div class="feature-card active">
+    <div class="feature-card">
       <span class="feature-number">01</span>
       <div class="feature-icon">👤</div>
       <h3>Student Records</h3>
@@ -226,14 +226,6 @@
   
   <!-- Help button -->
   <button class="help-btn">?</button>
-<script>
-  const featureCards = document.querySelectorAll('.feature-card');
-  featureCards.forEach(card => {
-    card.addEventListener('click', () => {
-      featureCards.forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
-    });
-  });
-</script>
+
 </body>
 </html>
