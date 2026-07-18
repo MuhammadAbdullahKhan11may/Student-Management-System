@@ -132,8 +132,8 @@ html, body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 90px 24px 0;
-  overflow: hidden;
+  padding: 90px 24px 120px;   /* increased bottom padding from 0 to 120px */
+  overflow: visible;           /* make sure nothing clips it */
 }
 
 .hero-grid-bg {
@@ -166,6 +166,14 @@ html, body {
   padding: 8px 18px;
   border-radius: 999px;
   margin-bottom: 36px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--purple-glow);
+  box-shadow: 0 8px 24px rgba(124, 110, 242, 0.35);
 }
 
 .badge-dot {
@@ -229,12 +237,20 @@ html, body {
   border-radius: 16px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 40px;
 }
 
 .stat {
   padding: 26px 20px;
   text-align: center;
   border-right: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+  background: rgba(124, 110, 242, 0.08);
 }
 
 .stat:last-child {
