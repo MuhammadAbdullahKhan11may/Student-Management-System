@@ -351,17 +351,32 @@ html, body {
   border: none;
 }
 
-.feature-card-active .feature-number {
+.feature-card {
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card:hover:not(.active) {
+  background: #f1f0fb;
+  border-color: #cfcaf5;
+}
+
+.feature-card.active {
+  background: linear-gradient(135deg, var(--purple-bright), var(--purple));
+  border: none;
+}
+
+.feature-card.active .feature-number {
   color: rgba(255, 255, 255, 0.18);
 }
 
-.feature-card-active .feature-icon {
+.feature-card.active .feature-icon {
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
 
-.feature-card-active h3,
-.feature-card-active p {
+.feature-card.active h3,
+.feature-card.active p {
   color: #ffffff;
 }
 
