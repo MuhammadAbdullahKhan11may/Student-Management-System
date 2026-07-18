@@ -109,6 +109,14 @@
   
   <!-- Help button -->
   <button class="help-btn">?</button>
-
+<script>
+  const featureCards = document.querySelectorAll('.feature-card');
+  featureCards.forEach(card => {
+    card.addEventListener('click', () => {
+      featureCards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
