@@ -348,37 +348,27 @@ html, body {
   max-width: 520px;
 }
 
-.feature-card-active {
-  background: linear-gradient(135deg, var(--purple-bright), var(--purple));
-  border: none;
-}
-
 .feature-card {
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
-.feature-card:hover:not(.active) {
-  background: #f1f0fb;
-  border-color: #cfcaf5;
-}
-
-.feature-card.active {
+.feature-card:hover {
   background: linear-gradient(135deg, var(--purple-bright), var(--purple));
   border: none;
 }
 
-.feature-card.active .feature-number {
+.feature-card:hover .feature-number {
   color: rgba(255, 255, 255, 0.18);
 }
 
-.feature-card.active .feature-icon {
+.feature-card:hover .feature-icon {
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
 
-.feature-card.active h3,
-.feature-card.active p {
+.feature-card:hover h3,
+.feature-card:hover p {
   color: #ffffff;
 }
 
