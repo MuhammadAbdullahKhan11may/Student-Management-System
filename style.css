@@ -246,6 +246,14 @@ html, body {
   font-weight: 800;
 }
 
+.stat-label {
+  color: var(--text-gray);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero-title {
