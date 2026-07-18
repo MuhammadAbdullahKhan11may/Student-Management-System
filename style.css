@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
 :root {
   --bg-black: #030304;
   --bg-panel: #0b0b12;
@@ -743,6 +747,7 @@ html, body {
   height: 220px;
   border-radius: 20px;
   padding: 4px;
+  overflow: hidden;
   background: linear-gradient(135deg, var(--purple-bright), var(--purple));
 }
 
