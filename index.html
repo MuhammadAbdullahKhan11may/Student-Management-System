@@ -227,5 +227,41 @@
   <!-- Help button -->
   <button class="help-btn">?</button>
 
+<script>
+  // Hero: Get Started → scroll to Features
+  document.querySelector('.hero-actions .btn-primary')
+    .addEventListener('click', () => {
+      document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+    });
+
+  // Hero: Learn more → scroll to About
+  document.querySelector('.link-learn-more')
+    .addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+
+  // Navbar: Login / Sign Up
+  document.querySelector('.nav-left .btn-outline')
+    .addEventListener('click', () => alert('Login functionality coming soon.'));
+
+  document.querySelector('.nav-left .btn-primary')
+    .addEventListener('click', () => alert('Sign up functionality coming soon.'));
+
+  // CTA: Get Started / Explore Features
+  document.querySelector('.cta .btn-cta-primary')
+    .addEventListener('click', () => alert('Get Started — sign up flow coming soon.'));
+
+  document.querySelector('.cta .btn-cta-outline')
+    .addEventListener('click', () => {
+      document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+    });
+
+  // About badges toggle
+  document.querySelectorAll('.about-badge').forEach(badge => {
+    badge.addEventListener('click', () => badge.classList.toggle('selected'));
+  });
+</script>
+  
 </body>
 </html>
