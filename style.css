@@ -244,22 +244,6 @@ html, body {
   font-weight: 800;
 }
 
-/* ---------- Help button ---------- */
-.help-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #17171f;
-  border: 1px solid #2c2c38;
-  color: var(--text-gray);
-  font-weight: 700;
-  font-size: 15px;
-  cursor: pointer;
-}
-
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero-title {
@@ -392,3 +376,21 @@ html, body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ---------- Help button ---------- */
+.help-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #17171f;
+  border: 1px solid #2c2c38;
+  color: var(--text-gray);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
