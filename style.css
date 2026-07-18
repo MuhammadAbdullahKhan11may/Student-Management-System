@@ -654,6 +654,42 @@ html, body {
   }
 }
 
+
+/* About stat boxes hover */
+.about-stat {
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.about-stat:hover {
+  transform: translateY(-6px);
+  border-color: var(--purple);
+  box-shadow: 0 12px 30px rgba(99, 85, 236, 0.25);
+}
+
+/* Buttons lift on hover */
+.btn-primary:hover,
+.btn-outline:hover,
+.btn-cta-primary:hover,
+.btn-cta-outline:hover {
+  transform: translateY(-2px);
+}
+
+.link-learn-more {
+  cursor: pointer;
+}
+
+/* About badges hover + selected state */
+.about-badge {
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.about-badge:hover,
+.about-badge.selected {
+  background: var(--purple);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
 /* ---------- Help button ---------- */
 .help-btn {
   position: fixed;
