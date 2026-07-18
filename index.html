@@ -262,6 +262,19 @@
     badge.addEventListener('click', () => badge.classList.toggle('selected'));
   });
 </script>
-  
+  <script>
+  // Badge → scroll to About section
+  document.querySelector('.badge')
+    .addEventListener('click', () => {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+
+  // Stat boxes → scroll to About stats for more detail
+  document.querySelectorAll('.stat').forEach(stat => {
+    stat.addEventListener('click', () => {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
 </body>
 </html>
