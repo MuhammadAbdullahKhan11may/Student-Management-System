@@ -300,10 +300,11 @@
 </script>
   <script>
   // Badge → scroll to About section
-  document.querySelector('.badge')
-    .addEventListener('click', () => {
-      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-    });
+document.querySelector('.badge')
+  .addEventListener('click', function() {
+    this.classList.toggle('selected');
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+  });
 
   // Stat boxes → scroll to About stats for more detail
   document.querySelectorAll('.stat').forEach(stat => {
