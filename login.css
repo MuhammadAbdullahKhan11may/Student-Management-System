@@ -170,3 +170,16 @@ body {
     padding: 36px 28px 32px;
   }
 }
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  color: #6b6b7c;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #5548e0;
+}
