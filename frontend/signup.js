@@ -146,15 +146,29 @@ form.addEventListener('submit', (event) => {
     role: roleSelect.value
   };
 
-  console.log('Signup form submitted:', formData);
+// Send the form data to the backend using fetch()
+fetch('http://localhost:5000/signup', {
+  method: 'POST',                              // we're sending data, so it's a POST request
+  headers: {
+    'Content-Type': 'application/json'         // tells the server we're sending JSON
+  },
+  body: JSON.stringify(formData)                // convert our JS object into a JSON string
+})
+  .then(response => response.json())            // parse the server's JSON response
+  .then(data => {
+    console.log('Server response:', data);      // log what the backend sent back
 
-  // Show success message
-  successBanner.classList.add('visible');
+    // Show success message
+    successBanner.classList.add('visible');
 
-  // Simulate redirect to login after a short delay
-  setTimeout(() => {
-    window.location.href = 'login.html';
-  }, 1800);
+    // Simulate redirect to login after a short delay
+    setTimeout(() => {
+      window.location.href = 'login.html';
+    }, 1800);
+  })
+  .catch(error => {
+    console.error('Error connecting to backend:', error);
+  });
 });
 
 // ---- Button starts disabled until the form is valid ----
