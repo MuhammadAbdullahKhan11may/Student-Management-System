@@ -26,8 +26,8 @@
           <label for="password">Password</label>
           <div class="input-wrap input-wrap-focus">
             <span class="input-icon">🔒</span>
-            <input type="password" id="password" placeholder="••••••••" value="••••••••">
-            <span class="toggle-password">👁️‍🗨️</span>
+            <input type="password" id="password" placeholder="••••••••">
+            <span class="toggle-password" id="togglePassword">👁️</span>
           </div>
         </div>
 
@@ -42,9 +42,23 @@
         <button type="submit" class="sign-in-btn">Sign In</button>
 
         <p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+        <a href="index.html" class="back-link">← Back to Home</a>
       </form>
     </div>
   </div>
+<script>
+  const passwordInput = document.getElementById('password');
+  const toggleIcon = document.getElementById('togglePassword');
 
+  toggleIcon.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      toggleIcon.textContent = '🙈';
+    } else {
+      passwordInput.type = 'password';
+      toggleIcon.textContent = '👁️';
+    }
+  });
+</script>
 </body>
 </html>
