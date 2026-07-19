@@ -588,9 +588,9 @@ html, body {
 }
 
 .btn-cta-outline {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #ffffff;
+  color: var(--purple);
+  border: 2px solid #ffffff;
 }
 
 /* ---------- Footer ---------- */
