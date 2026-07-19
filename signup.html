@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — Eduvanta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+  <div class="signup-page">
+    <div class="signup-card">
+
+      <!-- Branding -->
+      <div class="brand">
+        <span class="brand-icon">🎓</span>
+        <span class="brand-name">Eduvanta</span>
+      </div>
+
+      <h1 class="signup-title">Create your account</h1>
+      <p class="signup-subtitle">Join Eduvanta and start managing academic data efficiently</p>
+
+      <!-- Success banner (hidden until valid submit) -->
+      <div class="success-banner" id="successBanner">
+        ✅ Account created successfully! Redirecting to login...
+      </div>
+
+      <form class="signup-form" id="signupForm" novalidate>
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <div class="input-wrap">
+            <span class="input-icon">👤</span>
+            <input type="text" id="fullName" placeholder="John Doe" autocomplete="name">
+          </div>
+          <span class="error-msg" id="fullNameError"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrap">
+            <span class="input-icon">✉️</span>
+            <input type="email" id="email" placeholder="you@example.com" autocomplete="email">
+          </div>
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="password" placeholder="At least 6 characters" autocomplete="new-password">
+            <span class="toggle-password" id="togglePassword">👁️</span>
+          </div>
+          <span class="error-msg" id="passwordError"></span>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password">
+            <span class="toggle-password" id="toggleConfirmPassword">👁️</span>
+          </div>
+          <span class="error-msg" id="confirmPasswordError"></span>
+        </div>
+
+        <!-- Role -->
+        <div class="form-group">
+          <label for="role">Role</label>
+          <div class="input-wrap select-wrap">
+            <span class="input-icon">🎯</span>
+            <select id="role">
+              <option value="" disabled selected>Select your role</option>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher</option>
+            </select>
+          </div>
+          <span class="error-msg" id="roleError"></span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="create-account-btn" id="createAccountBtn" disabled>Create Account</button>
+
+        <p class="login-text">Already have an account? <a href="login.html" class="login-link">Login</a></p>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
