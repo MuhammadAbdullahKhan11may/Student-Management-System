@@ -723,12 +723,12 @@ html, body {
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
-.about-badge:hover,
-.about-badge.selected {
+.about-badge:hover {
   background: var(--purple);
   color: #ffffff;
   transform: translateY(-3px);
 }
+
 
 
 
