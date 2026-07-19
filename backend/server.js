@@ -19,6 +19,26 @@ app.get('/', (req, res) => {
   res.send('Backend is running');
 });
 
+// ============================================================
+// POST /signup route
+// This runs whenever the frontend sends a POST request to /signup
+// ============================================================
+app.post('/signup', (req, res) => {
+  // req.body contains the JSON data sent from the frontend
+  // (this works because we added app.use(express.json()) earlier)
+  const { name, email, password, role } = req.body;
+
+  // Log the received data in the backend terminal — just to confirm it arrived
+  console.log('New signup received:');
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Password:', password);
+  console.log('Role:', role);
+
+  // Send a JSON response back to the frontend
+  res.json({ message: 'Signup API working' });
+});
+
 // 5. Start the server and make it listen for requests
 const PORT = 5000;
 app.listen(PORT, () => {
