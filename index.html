@@ -29,7 +29,7 @@
   </header>
 
   <!-- Hero -->
-  <main class="hero">
+  <main class="hero" id="home">
     <div class="hero-grid-bg"></div>
 
     <div class="badge">
@@ -175,7 +175,7 @@
 </section>
   
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" id="contact-footer">
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo">
@@ -187,12 +187,12 @@
     </div>
 
     <div class="footer-col">
-      <p class="footer-heading">NAVIGATION</p>
-      <a href="#">Home</a>
-      <a href="#">Features</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
+  <p class="footer-heading">NAVIGATION</p>
+  <a href="javascript:void(0)" class="footer-nav-link" data-target="home">Home</a>
+  <a href="javascript:void(0)" class="footer-nav-link" data-target="features">Features</a>
+  <a href="javascript:void(0)" class="footer-nav-link" data-target="about">About</a>
+  <a href="javascript:void(0)" class="footer-nav-link" data-target="contact-footer">Contact</a>
+</div>
 
     <div class="footer-col">
       <p class="footer-heading">SYSTEM</p>
@@ -201,20 +201,20 @@
       <a href="#">Dashboard</a>
     </div>
 
-    <div class="footer-col">
-      <p class="footer-heading">FEATURES</p>
-      <a href="#">Student Management</a>
-      <a href="#">Course Enrollment</a>
-      <a href="#">Grade Management</a>
-      <a href="#">Role-Based Access</a>
-    </div>
+<div class="footer-col">
+  <p class="footer-heading">FEATURES</p>
+  <a href="javascript:void(0)">Student Management</a>
+  <a href="javascript:void(0)">Course Enrollment</a>
+  <a href="javascript:void(0)">Grade Management</a>
+  <a href="javascript:void(0)">Role-Based Access</a>
+</div>
 
-    <div class="footer-col">
-      <p class="footer-heading">PROJECT</p>
-      <a href="#">Documentation</a>
-      <a href="#">Report</a>
-      <a href="#">Diagrams</a>
-    </div>
+<div class="footer-col">
+  <p class="footer-heading">PROJECT</p>
+  <a href="javascript:void(0)">Documentation</a>
+  <a href="javascript:void(0)">Report</a>
+  <a href="javascript:void(0)">Diagrams</a>
+</div>
   </div>
 
   <div class="footer-bottom">
@@ -277,6 +277,15 @@ document.querySelector('.badge')
   document.querySelectorAll('.stat').forEach(stat => {
     stat.addEventListener('click', () => {
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+  <script>
+  document.querySelectorAll('.footer-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const target = document.getElementById(link.dataset.target);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 </script>
