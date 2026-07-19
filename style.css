@@ -163,16 +163,16 @@ html, body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(99, 85, 236, 0.12);
+  background: #000000;   /* was rgba(99, 85, 236, 0.12) */
   border: 1px solid rgba(124, 110, 242, 0.4);
-  color: var(--purple-glow);
+  color: #ffffff;   /* was var(--purple-glow) */
   font-size: 14px;
   font-weight: 600;
   padding: 8px 18px;
   border-radius: 999px;
   margin-bottom: 36px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .badge.selected {
@@ -182,13 +182,15 @@ html, body {
 }
 
 .badge:hover {
+  background: #ffffff;
+  color: var(--purple);
   transform: translateY(-2px);
-  border-color: var(--purple-glow);
+  border-color: #ffffff;
   box-shadow: 0 8px 24px rgba(124, 110, 242, 0.35);
 }
 
 .badge-dot {
-  color: var(--purple-glow);
+  color: currentColor;   /* was var(--purple-glow) — now matches text color automatically */
   font-size: 8px;
 }
 
@@ -258,13 +260,13 @@ html, body {
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.02);
+  background: #0e0e17;   /* was rgba(255,255,255,0.02) */
   margin-bottom: 40px;
 }
 
 .stat {
   padding: 26px 20px;
-  text-align: center;
+  text-align: left;   /* was center */
   border-right: 1px solid var(--border-subtle);
   cursor: pointer;
   transition: transform 0.25s ease, background 0.25s ease;
@@ -285,10 +287,10 @@ html, body {
 }
 
 .stat-label {
-  color: var(--text-gray);
-  font-size: 12px;
+  color: var(--purple-glow);   /* was var(--text-gray) */
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   margin-top: 8px;
 }
 
