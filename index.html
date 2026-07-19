@@ -194,12 +194,12 @@
   <a href="javascript:void(0)" class="footer-nav-link" data-target="contact-footer">Contact</a>
 </div>
 
-    <div class="footer-col">
-      <p class="footer-heading">SYSTEM</p>
-      <a href="#">Login</a>
-      <a href="#">Register</a>
-      <a href="#">Dashboard</a>
-    </div>
+<div class="footer-col">
+  <p class="footer-heading">SYSTEM</p>
+  <a href="login.html">Login</a>
+  <a href="#">Register</a>
+  <a href="#">Dashboard</a>
+</div>
 
 <div class="footer-col">
   <p class="footer-heading">FEATURES</p>
@@ -245,8 +245,10 @@
     });
 
   // Navbar: Login / Sign Up
-  document.querySelector('.nav-left .btn-outline')
-    .addEventListener('click', () => alert('Login functionality coming soon.'));
+document.querySelector('.nav-left .btn-outline')
+  .addEventListener('click', () => {
+    window.location.href = 'login.html';
+  });
 
   document.querySelector('.nav-left .btn-primary')
     .addEventListener('click', () => alert('Sign up functionality coming soon.'));
