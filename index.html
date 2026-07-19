@@ -197,7 +197,7 @@
 <div class="footer-col">
   <p class="footer-heading">SYSTEM</p>
   <a href="login.html">Login</a>
-  <a href="#">Register</a>
+  <a href="signup.html">Register</a>
   <a href="#">Dashboard</a>
 </div>
 
@@ -250,8 +250,10 @@ document.querySelector('.nav-left .btn-outline')
     window.location.href = 'login.html';
   });
 
-  document.querySelector('.nav-left .btn-primary')
-    .addEventListener('click', () => alert('Sign up functionality coming soon.'));
+document.querySelector('.nav-left .btn-primary')
+  .addEventListener('click', () => {
+    window.location.href = 'signup.html';
+  });
 
   // CTA: Get Started / Explore Features
   document.querySelector('.cta .btn-cta-primary')
